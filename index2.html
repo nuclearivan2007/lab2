@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна робота №2 — CSS</title>
+
+  <!-- 3. Зовнішній файл стилів -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 2. Стилі в секції head -->
+  <style>
+    h2 { color: darkgreen; }
+    .note { background: #fff3cd; border: 1px solid orange; padding: 8px; }
+    #unique-block { font-family: courier, monospace; }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Inline-стиль (атрибут style) -->
+  <h1 id="top" style="color: crimson; text-align: center;">Лабораторна робота №2: CSS</h1>
+
+  <h2>Селектори</h2>
+  <p class="note">Абзац із класом <b>note</b>: стиль задано у &lt;style&gt;.</p>
+  <p id="unique-block">Абзац з ідентифікатором: шрифт Courier.</p>
+  <p>Селектор атрибута:
+    <a href="https://nure.ua/">звичайне посилання</a>,
+    <a href="https://nure.ua/" target="_blank">посилання в новій вкладці</a>.
+  </p>
+  <div><b>Жирний у div: дочірній селектор p &gt; b не діє.</b></div>
+  <p><b>Жирний у p: дочірній селектор p &gt; b діє (зелений).</b></p>
+
+  <h2>Позиціювання (position)</h2>
+  <div class="parent">
+    Батьківський блок (position: relative)
+    <div class="abs">absolute</div>
+    <div class="rel">relative</div>
+  </div>
+
+  <h2>Обтікання (float)</h2>
+  <img class="photo" src="img.png" alt="Зображення">
+  <p>Це текст, який обтікає зображення справа. Зображення вирівняно по лівому краю
+     властивістю float: left. Текст продовжується, поки не закінчиться висота
+     картинки, а потім іде під нею. Ще трохи тексту, щоб обтікання було добре видно.
+     Ще трохи тексту, щоб обтікання було добре видно.</p>
+  <div class="clear"></div>
+
+  <h2>Вкладки</h2>
+  <div class="tabs">
+    <input type="radio" name="tab" id="tab1" checked>
+    <label for="tab1">Вкладка 1</label>
+
+    <input type="radio" name="tab" id="tab2">
+    <label for="tab2">Вкладка 2</label>
+
+    <input type="radio" name="tab" id="tab3">
+    <label for="tab3">Вкладка 3</label>
+
+    <div class="tab-content" id="content1">
+      <b>sample content 1</b>
+      <p>Pellentesque hendrerit, lorem luctus porttitor vestibulum.</p>
+    </div>
+    <div class="tab-content" id="content2">
+      <b>sample content 2</b>
+      <p>Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum.</p>
+    </div>
+    <div class="tab-content" id="content3">
+      <b>sample content 3</b>
+      <p>Pellentesque hendrerit, lorem luctus porttitor vestibulum.</p>
+    </div>
+  </div>
+
+  <!-- Фіксоване позиціювання -->
+  <a class="to-top" href="#top">&uarr; Нагору</a>
+
+</body>
+</html>
