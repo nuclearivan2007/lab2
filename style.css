@@ -1,0 +1,53 @@
+p, div { color: rgb(34, 92, 107); }
+        .note { 
+            background: rgb(166, 214, 253); }
+        #unique { 
+        text-align: center;
+        font-size: 30px; }
+
+span { 
+    color: rgb(204, 5, 5); 
+    font-weight: bold; 
+}
+.parent{ 
+    position: relative; 
+    height: 120px; 
+    background-color:  rgb(177, 223, 230); 
+}
+.abs{ 
+    position: absolute; 
+    top: 30px; 
+    right: 20px; 
+    width: 200px;
+    height: 70px;
+    background: rgb(84, 130, 168);
+    color: white;
+}
+.to-top { 
+    position: fixed; 
+    bottom: 15px; 
+    right: 15px; 
+}
+.article { 
+   float: left;
+   max-width: 500px;
+  margin: 0 auto;
+}
+.photo { 
+    float: left; 
+    width: 200px; 
+    margin: 0 15px 10px 0; 
+}
+.clear { 
+       clear: both; 
+   }
+.tabs input { display: none; }
+.content { display: none; }
+
+#tab1:checked ~ #content1 { display: block; }
+#tab2:checked ~ #content2 { display: block; }
+#tab3:checked ~ #content3 { display: block; } 
+
+#tab1:checked + label { background: rgb(166, 214, 253); }
+#tab2:checked + label { background: rgb(166, 214, 253); }
+#tab3:checked + label { background: rgb(166, 214, 253); }
