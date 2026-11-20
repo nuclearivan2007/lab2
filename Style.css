@@ -1,0 +1,104 @@
+/* ===== Селектор тегів ===== */
+body {
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 12pt;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 20px;
+}
+
+/* ===== Псевдоелемент: перша літера абзацу ===== */
+p::first-letter {
+  color: red;
+  font-size: 1.3em;
+}
+
+/* ===== Селектор атрибута ===== */
+a[target="_blank"] {
+  color: purple;
+  font-weight: bold;
+}
+
+/* ===== Дочірній селектор ===== */
+p > b {
+  color: green;
+}
+
+/* ===== Сусідній селектор: абзац одразу після h2 ===== */
+h2 + p {
+  border-left: 4px solid steelblue;
+  padding-left: 8px;
+}
+
+/* ===== position ===== */
+.parent {
+  position: relative;      /* точка відліку для absolute */
+  height: 120px;
+  border: 2px dashed gray;
+  padding: 5px;
+}
+.abs {
+  position: absolute;      /* щодо .parent */
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 50px;
+  background: red;
+  color: white;
+}
+.rel {
+  position: relative;      /* зміщення від свого місця */
+  left: 100px;
+  width: 100px;
+  height: 50px;
+  background: green;
+  color: white;
+}
+.to-top {
+  position: fixed;         /* не рухається при прокрутці */
+  bottom: 15px;
+  right: 15px;
+  background: steelblue;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+/* ===== float ===== */
+.photo {
+  float: left;
+  width: 150px;
+  margin: 0 15px 10px 0;
+}
+.clear {
+  clear: both;             /* скасовує обтікання */
+}
+
+/* ===== Вкладки (варіант) ===== */
+.tabs input {
+  display: none;           /* ховаємо radio, клік іде через label */
+}
+.tabs label {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.tab-content {
+  display: none;           /* усі вкладки приховані */
+  padding: 10px 20px;
+}
+
+/* активна вкладка: підпис (label) одразу після вибраного radio */
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label {
+  background: black;
+  color: white;
+}
+
+/* показуємо потрібний вміст: ~ = усі наступні сусіди */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
